@@ -1,4 +1,3 @@
-from utils import path
 from app.views import index,new,other 
 
 

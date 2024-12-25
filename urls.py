@@ -1,11 +1,10 @@
-from utils import path
-from app.views import index,new,other 
+from views import index,new,other 
 
 
-urlpatterns=[
-    ('/',index),
-    ('/New',new),
-    ('/New/Else',other)
-]
+urlpatterns={
+    '/' : index,
+    '/New' : new,
+    '/New/Else' : other
+}
 
 

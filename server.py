@@ -1,18 +1,10 @@
-from wsgiref import simple_server
+from waitress import serve
+
+
 from wsgi import wsgi_application
 
 
-
-
-
-with simple_server.make_server('',8000,app=wsgi_application) as s:
-    print(""" connecting to the server
-        http://localhost:8000
-       
-     
-    """)
-    s.serve_forever()
-
-
+if __name__=="__main__":
+        serve(wsgi_application, port='8000')
 
 
